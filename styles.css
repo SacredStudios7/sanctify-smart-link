@@ -45,7 +45,7 @@ html, body {
 
 .tips-text {
   margin: 0;
-  font-size: 18px; /* slightly larger */
+  font-size: 19px; /* one step larger */
   line-height: 1.5;
   color: var(--muted);
 }
@@ -55,12 +55,12 @@ html, body {
 .icon-inline {
   height: 2.2em;
   width: 2.2em;
-  vertical-align: -0.2em; /* lower slightly */
+  vertical-align: middle; /* align with text */
   position: relative;
-  top: 3px;
+  top: 6px; /* push slightly lower */
 }
-.icon-inline.tiktok { height: 2.8em; width: 2.8em; top: 4px; }
-.icon-inline.triple { height: 4em; width: 4em; vertical-align: -0.3em; top: 6px; }
+.icon-inline.tiktok { height: 2.6em; width: 2.6em; top: 7px; }
+.icon-inline.triple { height: 4.3em; width: 4.3em; top: 9px; }
 
 .app-icon {
   width: 200px;
