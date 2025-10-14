@@ -74,7 +74,7 @@
     if (inApp) {
       // Custom instruction for TikTok
       if (isTikTok) {
-        els.tipsText.innerHTML = 'On <img class="icon-inline" src="./Assets/Tiktok.png" alt="TikTok"/> tap the <img class="icon-inline" src="./Assets/tripledot.png" alt="More"/> and then tap <span class="highlight">"Open in Browser"</span> to download Sanctify for free.';
+        els.tipsText.innerHTML = 'On <img class="icon-inline tiktok" src="./Assets/Tiktok.png" alt="TikTok"/> tap the <img class="icon-inline triple" src="./Assets/tripledot.png" alt="More"/> and then tap <span class="highlight">"Open in Browser"</span> to download Sanctify for free.';
       } else {
         els.tipsText.innerHTML = 'Tap the menu, then choose <span class="highlight">Open in browser</span> to continue to the App Store.';
       }

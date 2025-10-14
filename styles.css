@@ -3,8 +3,8 @@
   --card: #ffffff;
   --text: #0b0b0e;
   --muted: #5f6368;
-  --accent: #d4aa2a;
-  --accent-contrast: #1f1400;
+  --accent: #39a7f8;
+  --accent-contrast: #083052;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
@@ -53,17 +53,19 @@ html, body {
 .highlight { color: var(--accent); font-weight: 700; }
 
 .icon-inline {
-  height: 1.4em;
-  width: 1.4em;
+  height: 2em;
+  width: 2em;
   vertical-align: -0.15em;
 }
+.icon-inline.tiktok { height: 2.4em; width: 2.4em; }
+.icon-inline.triple { height: 3.2em; width: 3.2em; vertical-align: -0.25em; }
 
 .app-icon {
-  width: 128px;
-  height: 128px;
-  border-radius: 28%;
+  width: 200px;
+  height: 200px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
-  background: #fff;
+  background: transparent;
 }
 
 .title {
