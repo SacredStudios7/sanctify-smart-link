@@ -65,17 +65,7 @@
     els.storeHeading.textContent = customHeading;
     els.btn.textContent = 'Download Now';
 
-    if (ios) {
-      els.iosLink.href = ios;
-      els.iosLink.hidden = false;
-    }
-    if (android) {
-      els.androidLink.href = android;
-      els.androidLink.hidden = false;
-    }
-    if (ios || android) {
-      els.altLinks.hidden = false;
-    }
+    // Alt store links removed by design
 
     // Set main button target preference based on platform
     els.btn.href = isIOS() && ios ? ios : (!isIOS() && android ? android : (ios || android || '#'));

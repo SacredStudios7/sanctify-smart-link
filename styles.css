@@ -39,18 +39,9 @@ html, body {
   padding: 18px 18px;
 }
 
-.tips-content {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
+.tips-content { display: block; }
 
-.tips-app {
-  width: 26px;
-  height: 26px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%230b0b0e" d="M9 2h6a7 7 0 0 1 7 7v6a7 7 0 0 1-7 7H9a7 7 0 0 1-7-7V9a7 7 0 0 1 7-7Z" opacity=".08"/></svg>') center/contain no-repeat;
-  border-radius: 6px;
-}
+/* removed square app glyph */
 
 .tips-text {
   margin: 0;
