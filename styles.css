@@ -1,0 +1,123 @@
+:root {
+  --bg: #e9fdff;
+  --card: #ffffff;
+  --text: #0b0b0e;
+  --muted: #5f6368;
+  --accent: #d4aa2a;
+  --accent-contrast: #1f1400;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 18px 56px;
+  gap: 24px;
+}
+
+.tips-card {
+  width: 100%;
+  max-width: 680px;
+  background: var(--card);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 18px 18px;
+}
+
+.tips-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tips-app {
+  width: 26px;
+  height: 26px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%230b0b0e" d="M9 2h6a7 7 0 0 1 7 7v6a7 7 0 0 1-7 7H9a7 7 0 0 1-7-7V9a7 7 0 0 1 7-7Z" opacity=".08"/></svg>') center/contain no-repeat;
+  border-radius: 6px;
+}
+
+.tips-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.highlight { color: var(--accent); font-weight: 700; }
+
+.icon-inline {
+  height: 1.1em;
+  width: 1.1em;
+  vertical-align: -0.15em;
+}
+
+.app-icon {
+  width: 128px;
+  height: 128px;
+  border-radius: 28%;
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  font-weight: 800;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  height: 54px;
+  padding: 0 22px;
+  border-radius: 28px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform .06s ease, filter .2s ease;
+}
+
+.button:active { transform: translateY(1px); }
+.button:hover { filter: brightness(1.03); }
+
+.alt-links {
+  display: flex;
+  gap: 18px;
+}
+
+.alt-links a { color: var(--muted); text-decoration: underline; }
+
+.footer-note {
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 420px) {
+  .title { font-size: 28px; }
+}
+
+

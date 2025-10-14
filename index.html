@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Smart link that safely opens your app from TikTok and other in‑app browsers." />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#f5f5f7" />
+    <title>App Safe Link</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="tipsCard" class="tips-card" aria-live="polite" aria-atomic="true">
+        <div class="tips-content">
+          <div class="tips-app"></div>
+          <p class="tips-text" id="tipsText">
+            On <img class="icon-inline" src="./Assets/Tiktok.png" alt="TikTok"/> tap the <img class="icon-inline" src="./Assets/tripledot.png" alt="More"/> and then tap <span class="highlight">"Open in Browser"</span> to download Sanctify for free.
+          </p>
+        </div>
+      </section>
+
+      <img id="appIcon" class="app-icon" alt="App icon" src="./Assets/Logo.png" />
+
+      <h1 class="title" id="storeHeading">Search "Sanctify" on the App Store</h1>
+
+      <a id="downloadBtn" class="button" href="#" rel="noopener" target="_blank">Download Now</a>
+
+      <div id="altLinks" class="alt-links" hidden>
+        <a id="iosLink" href="#" target="_blank" rel="noopener">Open in App Store</a>
+        <a id="androidLink" href="#" target="_blank" rel="noopener">Open in Google Play</a>
+      </div>
+
+      <p class="footer-note" id="footerNote"></p>
+    </main>
+
+    <script src="./main.js" defer></script>
+  </body>
+  </html>
+
+
