@@ -31,7 +31,7 @@ html, body {
 }
 
 .tips-card {
-  width: 100%;
+  width: auto;
   max-width: 680px;
   background: var(--card);
   border-radius: 22px;
@@ -39,7 +39,8 @@ html, body {
   padding: 18px 18px;
   position: fixed; /* stick to screen */
   top: 22px;
-  right: 22px;
+  right: 16px;
+  left: 16px; /* keep inside viewport on mobile */
   z-index: 10;
 }
 
@@ -48,7 +49,7 @@ html, body {
   content: "";
   position: absolute;
   top: -8px;
-  right: 28px;
+  right: 24px;
   width: 16px;
   height: 16px;
   background: var(--card);
@@ -63,7 +64,7 @@ html, body {
 
 .tips-text {
   margin: 0;
-  font-size: 19px; /* one step larger */
+  font-size: 17px; /* slightly smaller for compact fit */
   line-height: 1.5;
   color: var(--muted);
 }
@@ -71,14 +72,14 @@ html, body {
 .highlight { color: var(--accent); font-weight: 700; }
 
 .icon-inline {
-  height: 1.9em;
-  width: 1.9em;
+  height: 1.6em;
+  width: 1.6em;
   vertical-align: middle; /* align with text */
   position: relative;
-  top: 4px; /* slightly lower */
+  top: 3px; /* slightly lower */
 }
-.icon-inline.tiktok { height: 2.1em; width: 2.1em; top: 5px; }
-.icon-inline.triple { height: 3.5em; width: 3.5em; top: 7px; }
+.icon-inline.tiktok { height: 1.7em; width: 1.7em; top: 3px; }
+.icon-inline.triple { height: 2.8em; width: 2.8em; top: 6px; }
 
 .app-icon {
   width: 200px;
@@ -132,6 +133,12 @@ html, body {
 
 @media (max-width: 420px) {
   .title { font-size: 28px; }
+  .tips-text { font-size: 16px; }
+  .icon-inline { height: 1.4em; width: 1.4em; top: 2px; }
+  .icon-inline.tiktok { height: 1.5em; width: 1.5em; top: 2px; }
+  .icon-inline.triple { height: 2.4em; width: 2.4em; top: 4px; }
+  .tips-card { left: 12px; right: 12px; top: 14px; }
+  .tips-card::after { right: 20px; top: -7px; width: 14px; height: 14px; }
 }
 
 
