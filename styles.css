@@ -3,7 +3,7 @@
   --card: #ffffff;
   --text: #0b0b0e;
   --muted: #5f6368;
-  --accent: #39a7f8;
+  --accent: #1e8de3; /* darker blue for buttons and highlight */
   --accent-contrast: #083052;
   --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
@@ -45,27 +45,30 @@ html, body {
 
 .tips-text {
   margin: 0;
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 18px; /* slightly larger */
+  line-height: 1.5;
   color: var(--muted);
 }
 
 .highlight { color: var(--accent); font-weight: 700; }
 
 .icon-inline {
-  height: 2em;
-  width: 2em;
-  vertical-align: -0.15em;
+  height: 2.2em;
+  width: 2.2em;
+  vertical-align: -0.2em; /* lower slightly */
+  position: relative;
+  top: 3px;
 }
-.icon-inline.tiktok { height: 2.4em; width: 2.4em; }
-.icon-inline.triple { height: 3.2em; width: 3.2em; vertical-align: -0.25em; }
+.icon-inline.tiktok { height: 2.8em; width: 2.8em; top: 4px; }
+.icon-inline.triple { height: 4em; width: 4em; vertical-align: -0.3em; top: 6px; }
 
 .app-icon {
   width: 200px;
   height: 200px;
   border-radius: 22px;
-  box-shadow: var(--shadow);
   background: transparent;
+  box-shadow: none; /* avoid border-shadow box */
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.12)); /* shadow around logo shape only */
 }
 
 .title {
