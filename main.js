@@ -19,10 +19,11 @@
     footerNote: document.getElementById('footerNote'),
   };
 
+  const existingIconSrc = (els.appIcon.getAttribute('src') || '').trim();
   if (icon) {
     els.appIcon.src = icon;
-  } else {
-    // simple emoji placeholder rendered as SVG
+  } else if (!existingIconSrc) {
+    // Only use placeholder if no icon already set in HTML
     const placeholder = 'data:image/svg+xml;utf8,' + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
         <rect width="128" height="128" rx="28" fill="#fff"/>
