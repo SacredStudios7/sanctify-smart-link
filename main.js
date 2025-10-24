@@ -4,6 +4,7 @@
   const appName = params.get('name') || 'Sanctify';
   const ios = params.get('ios') || 'https://apps.apple.com/us/app/sanctify-prayers-guidance/id6751909914'; // default to Sanctify on App Store
   const android = params.get('android'); // https://play.google.com/store/apps/details?id=...
+  const defaultAndroid = 'https://play.google.com/store/apps/details?id=com.sacredstudios.sanctify&hl=en_US';
   const icon = params.get('icon'); // optional absolute URL
   const fallback = params.get('fallback'); // optional generic site
   const autoredirect = params.get('autoredirect') !== 'false';
@@ -69,7 +70,8 @@
     // Alt store links removed by design
 
     // Set main button target preference based on platform
-    els.btn.href = isIOS() && ios ? ios : (!isIOS() && android ? android : (ios || android || '#'));
+    const androidUrl = android || defaultAndroid;
+    els.btn.href = isIOS() && ios ? ios : (!isIOS() && androidUrl ? androidUrl : (ios || androidUrl || '#'));
 
     if (inApp) {
       // Custom instruction for TikTok
@@ -85,7 +87,10 @@
     // Outside in-app browser → redirect immediately if we have a store link
     if (autoredirect) {
       if (isIOS() && ios) return safeNavigate(ios);
-      if (!isIOS() && android) return safeNavigate(android);
+      if (!isIOS()) {
+        const androidUrl = android || defaultAndroid;
+        if (androidUrl) return safeNavigate(androidUrl);
+      }
       if (fallback) return safeNavigate(fallback);
     }
   }
